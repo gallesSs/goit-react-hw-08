@@ -1,0 +1,19 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-right: 30px;
+}
+
+.username {
+    font-weight: 700;
+}
+.btn {
+    padding: 5px;
+    transform: scale(1);
+    background-color: rgba(247, 244, 244, 0.514);
+    border: none;
+    box-shadow: 0px 2px 10px 1px;
+    color: rgb(4, 43, 30);
+    line-height: 1.5;
+}

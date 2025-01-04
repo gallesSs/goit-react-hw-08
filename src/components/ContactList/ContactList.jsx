@@ -2,17 +2,24 @@ import Contact from "../Contact/Contact";
 import css from "./ContactList.module.css";
 import {useDispatch, useSelector} from 'react-redux';
 import {
-  selectFilteredContacts
-} from '../../redux/contactsSlice.js';
-import {deleteContact} from '../../redux/contactsOps.js';
+  selectError,
+  selectFilteredContacts,
+  selectLoading,
+} from "../../redux/contacts/selectors";
+import {deleteContact} from '../../redux/contacts/operations.js';
+import Loader from '../Loader/Loader.jsx';
 
 const ContactList = () => {
   const contacts = useSelector(selectFilteredContacts)
   const dispatch = useDispatch();
+  const isLoading = useSelector(selectLoading);
+  const error = useSelector(selectError);
 
   return (
     <div>
       <ul className={css.list}>
+        {isLoading && !error && <Loader />}
+        {error && <p>Oops, something went wrong! Please, try again</p>}
         {contacts.map((user) => {
           return (
             <li

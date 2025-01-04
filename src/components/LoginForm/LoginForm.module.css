@@ -1,0 +1,67 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 400px;
+    resize: none;
+    margin: 30px;
+    border: 2px solid rgb(71, 141, 118);
+    border-radius: 8px;
+    box-shadow: 0px 2px 10px 1px;
+    background-color: rgba(12, 122, 86, 0.164);
+    padding: 30px;
+}
+.label {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: rgb(4, 43, 30);
+    width: 100%;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    &::first-letter {
+        text-transform: uppercase;
+    }
+}
+
+.input {
+    width: auto;
+    padding: 12px 12px 12px 15px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    border-radius: 8px;
+    background-color: rgba(247, 244, 244, 0.514);
+    border-bottom: 1px solid rgb(23, 150, 107);
+    box-shadow: 0px 0px 15px 0px;
+    outline: none;
+}
+.btn {
+    width: 50%;
+    padding: 12px;
+    transform: scale(1);
+    background-color: rgba(247, 244, 244, 0.514);
+    border: none;
+    box-shadow: 0px 2px 10px 1px;
+    color: rgb(4, 43, 30);
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+}
+.btn:hover {
+    border: 2px solid rgb(4, 66, 46);
+    transform: scale(1.1);
+}
+.btn:focus {
+    outline: none;
+}
+.error {
+    color: rgb(194, 80, 14);
+    font-size: 16px;
+    font-weight: 700;
+}
